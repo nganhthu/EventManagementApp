@@ -12,7 +12,7 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.splashScreen}>
-      <Image source={require('./image/logo.jpg')} style={styles.logo} />
+      <Image source={require('./image/logo.png')} style={styles.logo} />
       <ActivityIndicator size="large" color="#FFA500" />
     </View>
   );
@@ -26,9 +26,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF', // Màu nền trắng
   },
   logo: {
-    width: 200, // Kích thước logo
-    height: 200, // Kích thước logo
-    marginBottom: 20,
+    width: 400, // Kích thước logo lớn hơn
+    height: 400, // Kích thước logo lớn hơn
+    marginBottom: 20, // Khoảng cách giữa logo và ActivityIndicator
   },
 });
 
