@@ -11,6 +11,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from './screens/SplashScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
+import OnboardingScreen2 from './screens/OnboardingScreen2';
+
 import {
   ScrollView,
   StatusBar,
@@ -65,6 +67,7 @@ function App(): React.JSX.Element {
           <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
             <Stack.Screen name="Splash" component={SplashScreen} />
             <Stack.Screen name="Onboarding" component={OnboardingScreen} />
+            <Stack.Screen name="OnboardingScreen2" component={OnboardingScreen2} />
           </Stack.Navigator>
         </NavigationContainer>
       );

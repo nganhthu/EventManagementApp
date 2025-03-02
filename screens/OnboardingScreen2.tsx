@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import Onboard1 from './image/onboard1.svg'; // Import SVG như một component
+import Onboard2 from './image/onboard2.svg'; // Import SVG như một component
 import Logo1 from './image/logo1.svg'; // Import logo
 import { useNavigation } from '@react-navigation/native';
 
-const EventScreen = () => {
+const OnboardingScreen2 = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
@@ -12,7 +12,7 @@ const EventScreen = () => {
                 <Logo1 width={200} height={200} /> {/* Thêm logo với kích thước phù hợp */}
             </View>
             <View style={styles.imageContainer}>
-                <Onboard1 width={370} height={300} /> {/* Điều chỉnh kích thước SVG */}
+                <Onboard2 width={370} height={300} /> {/* Điều chỉnh kích thước SVG */}
             </View>
 
             <View style={styles.footer}>
@@ -22,15 +22,15 @@ const EventScreen = () => {
                     In publishing and graphic design,{'\n'} Group 11 is a placeholder text commonly
                 </Text>
                 <View style={styles.pagination}>
+                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} />
                     <View style={[styles.dot, { backgroundColor: '#fff' }]} />
-                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
                     <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
                 </View>
                 <View style={styles.buttonContainer}>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}> {/* Thêm logic điều hướng */}
+                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen')}> {/* Thêm logic điều hướng */}
                           <Text style={styles.buttonText}>Skip</Text>
                      </TouchableOpacity>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}> {/* Thêm logic điều hướng */}
+                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}> {/* Thêm logic điều hướng */}
                           <Text style={styles.buttonText}>Next</Text>
                      </TouchableOpacity>
                 </View>
@@ -114,4 +114,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default EventScreen;
+export default OnboardingScreen2;
