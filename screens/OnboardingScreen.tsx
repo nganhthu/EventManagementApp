@@ -27,7 +27,7 @@ const EventScreen = () => {
                     <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
                 </View>
                 <View style={styles.buttonContainer}>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}> {/* Thêm logic điều hướng */}
+                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}> {/* Thêm logic điều hướng */}
                           <Text style={styles.buttonText}>Skip</Text>
                      </TouchableOpacity>
                      <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}> {/* Thêm logic điều hướng */}

@@ -16,10 +16,10 @@ const OnboardingScreen2 = () => {
             </View>
 
             <View style={styles.footer}>
-                <Text style={styles.footerText}>Explore Upcoming and {'\n'}Nearby Event</Text>
+                <Text style={styles.footerText}>Create and Find Events{'\n'} Easily in One Place</Text>
 
                 <Text style={styles.footerDescription}>
-                    In publishing and graphic design,{'\n'} Group 11 is a placeholder text commonly
+                    In this app  you can create any kind of {'\n'} events and you can join at events
                 </Text>
                 <View style={styles.pagination}>
                     <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} />
@@ -27,8 +27,8 @@ const OnboardingScreen2 = () => {
                     <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
                 </View>
                 <View style={styles.buttonContainer}>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen')}> {/* Thêm logic điều hướng */}
-                          <Text style={styles.buttonText}>Skip</Text>
+                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}> {/* Thêm logic điều hướng */}
+                         <Text style={styles.buttonText}>Skip</Text>
                      </TouchableOpacity>
                      <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}> {/* Thêm logic điều hướng */}
                           <Text style={styles.buttonText}>Next</Text>
