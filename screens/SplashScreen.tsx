@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 import Logo from './image/logo.svg';
 
 const SplashScreen = ({ navigation }) => {
@@ -13,7 +13,9 @@ const SplashScreen = ({ navigation }) => {
 
   return (
     <View style={styles.splashScreen}>
-      <Logo width={370} height={370} />
+      <View style={styles.logoContainer}>
+        <Logo width="100%" height="100%" />
+      </View>
       <ActivityIndicator size="large" color="#FFA500" />
     </View>
   );
@@ -26,9 +28,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff5ef', // Đổi màu nền thành #fff5ef
   },
-  logo: {
-    width: 400, // Kích thước logo lớn hơn
-    height: 400, // Kích thước logo lớn hơn
+  logoContainer: {
+    width: '70%', // Chiều rộng của logo container
+    aspectRatio: 1, // Giữ tỷ lệ 1:1 cho logo
+    justifyContent: 'center', // Căn giữa logo theo chiều dọc
+    alignItems: 'center', // Căn giữa logo theo chiều ngang
     marginBottom: 30, // Khoảng cách giữa logo và ActivityIndicator
   },
 });

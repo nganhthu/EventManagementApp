@@ -1,18 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import Onboard1 from './image/onboard1.svg'; // Import SVG như một component
 import Logo1 from './image/logo1.svg'; // Import logo
 import { useNavigation } from '@react-navigation/native';
+
+const { width, height } = Dimensions.get('window'); // Lấy kích thước màn hình
 
 const EventScreen = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Logo1 width={200} height={200} /> {/* Thêm logo với kích thước phù hợp */}
+                <Logo1 width={width * 0.5} height={width * 0.5} /> {/* Thay đổi kích thước logo */}
             </View>
             <View style={styles.imageContainer}>
-                <Onboard1 width={370} height={300} /> {/* Điều chỉnh kích thước SVG */}
+                <Onboard1 width={width * 0.9} height={height * 0.4} /> {/* Thay đổi kích thước SVG */}
             </View>
 
             <View style={styles.footer}>
@@ -23,16 +25,16 @@ const EventScreen = () => {
                 </Text>
                 <View style={styles.pagination}>
                     <View style={[styles.dot, { backgroundColor: '#fff' }]} />
-                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
-                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} /> {/* Màu trắng nhạt */}
+                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} />
+                    <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} />
                 </View>
                 <View style={styles.buttonContainer}>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}> {/* Thêm logic điều hướng */}
-                          <Text style={styles.buttonText}>Skip</Text>
-                     </TouchableOpacity>
-                     <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}> {/* Thêm logic điều hướng */}
-                          <Text style={styles.buttonText}>Next</Text>
-                     </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}>
+                        <Text style={styles.buttonText}>Skip</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen2')}>
+                        <Text style={styles.buttonText}>Next</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -47,38 +49,23 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     logoContainer: {
-        marginTop: -150,
-        marginBottom: -50, // Giảm khoảng cách giữa logo và ảnh
+        marginTop: -140,
+        marginBottom: -40,
     },
     imageContainer: {
-        marginBottom: 50, // Khoảng cách giữa ảnh và chữ
-    },
-    textContainer: {
-        alignItems: 'center', // Căn giữa chữ
-    },
-    title: {
-        fontSize: 24,
-        fontWeight: 'bold',
-    },
-    subtitle: {
-        fontSize: 18,
-        fontWeight: '600',
-    },
-    description: {
-        textAlign: 'center',
-        marginHorizontal: 20,
+        marginBottom: 20,
     },
     footer: {
-        backgroundColor: '#FF6F20', // Màu cam
+        backgroundColor: '#FF6F20',
         padding: 20,
         width: '100%',
         alignItems: 'center',
-        borderTopLeftRadius: 20, // Bo tròn góc trên bên trái
-        borderTopRightRadius: 20, // Bo tròn góc trên bên phải
+        borderTopLeftRadius: 32,
+        borderTopRightRadius: 32,
     },
     footerText: {
         marginTop: 20,
-        fontSize: 30, // Tăng kích thước chữ
+        fontSize: 24, // Giảm kích thước chữ cho phù hợp
         fontWeight: 'bold',
         color: '#fff',
         textAlign: 'center',
@@ -89,7 +76,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#fff',
         marginVertical: 10,
-        fontSize: 15, // Tăng kích thước chữ
+        fontSize: 14, // Giảm kích thước chữ cho phù hợp
     },
     pagination: {
         flexDirection: 'row',
@@ -97,9 +84,9 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     dot: {
-        width: 12, // Tăng kích thước nút tròn
-        height: 12, // Tăng kích thước nút tròn
-        borderRadius: 6, // Bo tròn để tạo hình tròn
+        width: 12,
+        height: 12,
+        borderRadius: 6,
         marginHorizontal: 5,
     },
     buttonContainer: {

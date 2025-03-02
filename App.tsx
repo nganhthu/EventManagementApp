@@ -13,6 +13,8 @@ import SplashScreen from './screens/SplashScreen';
 import OnboardingScreen from './screens/OnboardingScreen';
 import OnboardingScreen2 from './screens/OnboardingScreen2';
 import OnboardingScreen3 from './screens/OnboardingScreen3';
+import LoginScreen from './screens/LoginScreen';
+
 
 import {
   ScrollView,
@@ -69,7 +71,8 @@ function App(): React.JSX.Element {
             <Stack.Screen name="Splash" component={SplashScreen} />
             <Stack.Screen name="Onboarding" component={OnboardingScreen} />
             <Stack.Screen name="OnboardingScreen2" component={OnboardingScreen2} />
-             <Stack.Screen name="OnboardingScreen3" component={OnboardingScreen3} />
+            <Stack.Screen name="OnboardingScreen3" component={OnboardingScreen3} />
+            <Stack.Screen name="LoginScreen" component={LoginScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       );
