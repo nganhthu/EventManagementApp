@@ -11,14 +11,16 @@ const OnboardingScreen3 = () => {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Logo1 width={width * 0.5} height={width * 0.5} /> {/* Thay đổi kích thước logo */}
+                <Logo1 width={width * 0.6} height={width * 0.6} />
             </View>
             <View style={styles.imageContainer}>
-                <Onboard3 width={width * 0.9} height={height * 0.4} /> {/* Thay đổi kích thước SVG */}
+                <Onboard3 width={width * 0.9} height={height * 0.4} />
             </View>
 
             <View style={styles.footer}>
-                <Text style={styles.footerText}>Watching Free{'\n'}Concerts with Friends</Text>
+                <Text style={styles.footerText}>
+                    Watching Free{'\n'}Concerts with Friends
+                </Text>
 
                 <Text style={styles.footerDescription}>
                     Find and Booking concert tickets near{'\n'} your invite your friends to watch together
@@ -26,7 +28,7 @@ const OnboardingScreen3 = () => {
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity
                         style={styles.getStartedButton}
-                        onPress={() => navigation.navigate('LoginScreen')} // Thay đổi tên màn hình đăng nhập
+                        onPress={() => navigation.navigate('LoginScreen')}
                     >
                         <Text style={styles.buttonText}>Get Started</Text>
                     </TouchableOpacity>
@@ -44,19 +46,21 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     logoContainer: {
-        marginTop: -140,
+        marginTop: -10,
         marginBottom: -40,
     },
     imageContainer: {
-        marginBottom: 20,
+        marginBottom: -150,
     },
     footer: {
         backgroundColor: '#FF6F20', // Màu cam
-        padding: 20,
+        padding: 40,
         width: '100%',
         alignItems: 'center',
         borderTopLeftRadius: 32,
         borderTopRightRadius: 32,
+        marginTop: 200,
+        paddingBottom: 70,
     },
     footerText: {
         marginTop: 20,

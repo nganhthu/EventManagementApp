@@ -11,14 +11,16 @@ const OnboardingScreen2 = () => {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Logo1 width={width * 0.5} height={width * 0.5} /> {/* Thay đổi kích thước logo */}
+                <Logo1 width={width * 0.6} height={width * 0.6} />
             </View>
             <View style={styles.imageContainer}>
-                <Onboard2 width={width * 0.9} height={height * 0.4} /> {/* Thay đổi kích thước SVG */}
+                <Onboard2 width={width * 0.9} height={height * 0.4} />
             </View>
 
             <View style={styles.footer}>
-                <Text style={styles.footerText}>Create and Find Events{'\n'} Easily in One Place</Text>
+                <Text style={styles.footerText}>
+                    Create and Find Events{'\n'} Easily in One Place
+                </Text>
 
                 <Text style={styles.footerDescription}>
                     In this app you can create any kind of {'\n'} events and you can join at events
@@ -29,10 +31,16 @@ const OnboardingScreen2 = () => {
                     <View style={[styles.dot, { backgroundColor: 'rgba(255, 255, 255, 0.5)' }]} />
                 </View>
                 <View style={styles.buttonContainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('OnboardingScreen3')}
+                        style={styles.button}
+                    >
                         <Text style={styles.buttonText}>Skip</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigation.navigate('OnboardingScreen3')}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('OnboardingScreen3')}
+                        style={styles.button}
+                    >
                         <Text style={styles.buttonText}>Next</Text>
                     </TouchableOpacity>
                 </View>
@@ -49,19 +57,21 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     logoContainer: {
-        marginTop: -140,
+        marginTop: -10,
         marginBottom: -40,
     },
     imageContainer: {
-        marginBottom: 20,
+        marginBottom: -150,
     },
     footer: {
         backgroundColor: '#FF6F20',
-        padding: 20,
+        padding: 40,
         width: '100%',
         alignItems: 'center',
         borderTopLeftRadius: 32,
         borderTopRightRadius: 32,
+        marginTop: 200,
+        paddingBottom: 70,
     },
     footerText: {
         marginTop: 20,
