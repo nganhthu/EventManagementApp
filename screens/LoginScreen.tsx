@@ -44,11 +44,13 @@ const LoginScreen = () => {
             </View>
 
             <View style={styles.checkboxContainer}>
-                <CheckBox
-                    value={rememberMe}
-                    onValueChange={setRememberMe}
-                />
-                <Text style={styles.checkboxLabel}>Nhớ tài khoản</Text>
+                <View style={styles.checkboxWrapper}>
+                    <CheckBox
+                        value={rememberMe}
+                        onValueChange={setRememberMe}
+                    />
+                    <Text style={styles.checkboxLabel}>Nhớ tài khoản</Text>
+                </View>
                 <TouchableOpacity>
                     <Text style={styles.forgotPassword}>Quên mật khẩu?</Text>
                 </TouchableOpacity>
@@ -107,13 +109,18 @@ const styles = StyleSheet.create({
     checkboxContainer: {
         flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'space-between',
         marginBottom: 20,
+        width: '100%',
+    },
+    checkboxWrapper: {
+        flexDirection: 'row',
+        alignItems: 'center',
     },
     checkboxLabel: {
         marginLeft: 10,
     },
     forgotPassword: {
-        marginLeft: 'auto',
         color: '#FF6F20',
     },
     loginButton: {
