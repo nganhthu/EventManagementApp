@@ -15,6 +15,9 @@ import OnboardingScreen2 from './screens/OnboardingScreen2';
 import OnboardingScreen3 from './screens/OnboardingScreen3';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
+import OTPRegisScreen from './screens/OTPRegisScreen';
+import HomeScreen from './screens/HomeScreen'; 
+
 
 import {
   ScrollView,
@@ -74,6 +77,8 @@ function App(): React.JSX.Element {
             <Stack.Screen name="OnboardingScreen3" component={OnboardingScreen3} />
             <Stack.Screen name="LoginScreen" component={LoginScreen} />
             <Stack.Screen name="Register" component={RegisterScreen} />
+            <Stack.Screen name="OTPRegis" component={OTPRegisScreen} />
+            <Stack.Screen name="HomeScreen" component={HomeScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       );
